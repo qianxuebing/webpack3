@@ -13,10 +13,6 @@
 
 ### 配置webpack.config.js  
 const path = require("path");
-// 引入html-webpack-plugin模块
-const htmlWebpackPlugin = require("html-webpack-plugin");
-// 引入clean-webpack-plugin模块
-const cleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
     // 入口
