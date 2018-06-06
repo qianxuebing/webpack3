@@ -12,9 +12,9 @@
 执行指令 cnpm install webpack --save-dev  生成node_modules
 
 ### 配置webpack.config.js  
-const path = require("path");
+`const path = require("path");`
 
-module.exports = {
+`module.exports = {
     // 入口
     entry: path.resolve(__dirname,"./src/js/app.js"), //制定webpack打包的入口为app.js （配置路径用path.resolve()处理 ）
     // 出口
@@ -33,6 +33,6 @@ module.exports = {
             dry:false
         })
     ]
-}
+}`
 
     
