@@ -21,9 +21,9 @@ function getData() {
 } //找到页面中的Dom 
 let container = document.querySelector('#app'); 
 //获取返回的结果并打印到界面 
-getData().then((data) => { 
+/* getData().then((data) => { 
     container.innerHTML = JSON.stringify(data) }, 
     (err) => { 
         container.innerHTML = JSON.stringify(err) 
     }
-)
+) */
