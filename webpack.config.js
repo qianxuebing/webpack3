@@ -41,6 +41,17 @@ module.exports = {
                 test: /\.js$/,
                 loader: "babel-loader" ,
                 exclude: /node_modules/               
+            }, {
+                test: /\.(png|jpg|gif|svg)$/,
+                exclude: /node_modules/,
+                use:[{
+                    loader: "file-loader",
+                    options:{
+                        name: '[hash].[ext]', 
+                        outputPath: '/assets/',//定义图片输出存放的文件夹位置 
+                        useRelativePath: true,//设置路径为相对位置
+                    }
+                }]               
             }
         ] 
     },
