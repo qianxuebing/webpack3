@@ -24,6 +24,19 @@
 ### 清除重复的文件
 >cnpm install clean-webpack-plugin --save-dev
 
+###安装css加载器
+>cnpm i style-loader css-loader --save-dev
+>cnpm i postcss-loader autoprefixer --save-dev
+
+###css预处理器less
+>cnpm i less less-loader --save-dev
+
+###babel编译ES6
+>cnpm install  babel-loader babel-core babel-preset-env --save-dev
+
+###css与js分离
+>cnpm i extract-text-webpack-plugin --save-dev
+
 ### 执行编译
 >webpack
 
