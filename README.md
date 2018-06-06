@@ -12,9 +12,9 @@
 ### webpack配置，生成带hash值的js文件
 `output:{`
 
-`  path: path.resolve(__dirname,"./dist"), //指定打包后js文件放置的位置`
+`  path: path.resolve(__dirname,"./dist")`
 
-`  filename: "js/bundle-[hash:1].js" //指定打包后的js名称，也是index.html最终引入的js名称`
+`  filename: "js/bundle-[hash:1].js"`
 
 `}`
 
