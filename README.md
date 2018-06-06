@@ -19,10 +19,10 @@
 `}`
 
 ### 动态生成html
->cnpm install html-webpack-plugin
+>cnpm install html-webpack-plugin --save-dev
 
 ### 清除重复的文件
->cnpm install clean-webpack-plugin
+>cnpm install clean-webpack-plugin --save-dev
 
 ### 执行编译
 >webpack
