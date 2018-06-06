@@ -7,10 +7,7 @@
 >npm init 
 
 ### 安装webpack
->cnpm install webpack --save-dev 
-
-### 执行编译
->webpack 
+>cnpm install webpack --save-dev  
 
 ### webpack配置，生成带hash值的js文件
 `output:{`
@@ -26,6 +23,9 @@
 
 ### 清除重复的文件
 >cnpm install clean-webpack-plugin
+
+### 执行编译
+>webpack
 
 
     
