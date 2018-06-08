@@ -38,6 +38,12 @@
 ### css与js分离
 >cnpm i extract-text-webpack-plugin --save-dev
 
+### 图片处理
+>cnpm install url-loader -save-dev
+
+### 服务器端运行设置
+>cnpm install webpack-dev-server --save-dev
+
 ### 执行编译
 >webpack
 

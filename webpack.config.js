@@ -49,7 +49,9 @@ module.exports = {
             } ]
  
     },
+    // 调试
     devtool:'source-map',
+    // 服务器运行
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
