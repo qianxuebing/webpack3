@@ -1,4 +1,4 @@
-import '../css/common.css';
+
 import '../css/style.less';
 
 const a = "webpack3";

@@ -19,18 +19,10 @@ module.exports = {
         path: path.resolve(__dirname, "./dist"), //指定打包后js文件放置的位置
         filename: "js/[name]-[hash:2].js"
     },
+
     // 配置css加载器     
     module: {
         rules: [{
-            test: /\.css$/, //匹配所有css文件 
-            exclude: /node_modules/,  //排除对node_module文件夹下面的所有资源的匹配 
-            use: extractCSS.extract([
-                //  { loader: "style-loader" }, 
-                { loader: "css-loader", options: { importLoaders: 1 } },//importLoaders解决由于css-loader处理文件导入的方式导致postcss-loader不能正常使用的问题
-                { loader: "postcss-loader" }
-            ]) //指定postcss加载器
-
-        }, {
             test: /\.less$/,
             exclude: /node_modules/,
             use: extractLESS.extract([
@@ -43,29 +35,25 @@ module.exports = {
             test: /\.js$/,
             loader: "babel-loader",
             exclude: /node_modules/
-        }, {
+        } ,  {
             test: /\.(png|jpg|gif|svg)$/,
-            exclude: /node_modules/,
-            use: [{
-                loader: "file-loader",
-                options: {
-                    name: '[hash:2].[ext]',
-                    publicPath: '',//定义图片输出存放的文件夹位置 
-                    outputPath: '/images/'
-                }
-            }]
-        }, {
-            test: /\.(png|jpg|gif|svg)$/i,
             exclude: /node_modules/,
             use: [{
                 loader: "url-loader",
                 options: {
-                    limit: 10240,
-                    publicPath: '',//定义图片输出存放的文件夹位置 
+                    limit: 10240 ,
+                    publicePath:'',
                     outputPath: '/images/'
                 }
             }]
-        }]
+            } ]
+ 
+    },
+    devtool:'source-map',
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
     },
 
     // 初始化插件
@@ -78,9 +66,9 @@ module.exports = {
         }),
         // 删除dist文件夹下重复的文件
         new cleanWebpackPlugin(["dist"], {
-            root: __dirname, //指定插件根目录位置
+            root: path.resolve(__dirname,"./"), //指定插件根目录位置
             verbose: true, //开启在控制台输出信息
-            dry: false ///启用删除文件
-        })
+            dry: true ///启用删除文件
+        }),
     ]
 }

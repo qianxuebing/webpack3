@@ -4,7 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server",
+    "build":"webpack"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "postcss-loader": "^2.1.5",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
