@@ -42,10 +42,10 @@
 >cnpm install url-loader -save-dev
 
 ### 服务器端运行设置
->cnpm install webpack-dev-server --save-dev
+>cnpm install webpack-dev-server --save-dev (npm run dev)
 
 ### 执行编译
->webpack
+>webpack (npm run build)
 
 
     
